@@ -1,7 +1,7 @@
 import { Context, segment } from "koishi";
 import Schema from "schemastery";
 
-export const name = "javbus";
+export const name = "javbus-new";
 
 export interface Config {
   apiPrefix: string;
@@ -18,7 +18,9 @@ export const Config = Schema.object({
   apiPrefix: Schema.string()
     .default("")
     .required()
-    .description("请填写你的api地址前缀（https://www.xxx.com/）"),
+    .description(
+      "请填写你的api地址前缀（https://www.xxx.com/api）"
+    ),
   allowDownloadLink: Schema.boolean()
     .default(false)
     .description("是否允许返回磁力链接"),
@@ -57,7 +59,7 @@ export function apply(ctx: Context, config: Config) {
       // https://jav.hina.asia/api/magnets/JUQ-434?gid=56326057355&uc=0
       const magnetsUrl =
         config.apiPrefix + magnetsDetailApi + `${id}?gid=${gid}&uc=${uc}`;
-      //   console.log("Fetching details from:", magnetsUrl);
+      console.log("Fetching details from:", magnetsUrl);
 
       // 第二个请求
       const magnetsList = await ctx.http.get(magnetsUrl);
