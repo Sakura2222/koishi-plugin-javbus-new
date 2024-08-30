@@ -1,17 +1,13 @@
 {
-  "name": "koishi-plugin-javbus",
-  "description": "查询javbus番号",
-  "author": {
-    "name": "TEDIORELEE",
-    "email": "tediorelee@gmail.com",
-    "url": "https://github.com/tediorelee"
-  },
+  "name": "koishi-plugin-javbus-new",
+  "description": "查询javbus番号,基于koishi-plugin-javbus修改",
+  "author": "anon_tokyo <test@gmail.com>",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tediorelee/koishi-plugin-javbus.git"
+    "url": "git+https://github.com/Sakura2222/koishi-plugin-javbus-new.git"
   },
-  "version": "1.0.9",
+  "version": "2.0.4",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -23,7 +19,11 @@
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "车牌号",
+    "番号",
+    "av",
+    "javbus"
   ],
   "peerDependencies": {
     "koishi": "^4.9.9"
